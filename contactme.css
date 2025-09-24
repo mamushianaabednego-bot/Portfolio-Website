@@ -1,0 +1,44 @@
+/* --- Section: Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    backdrop-filter: blur(5px);
+}
+
+.nav-links-container {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #E4E6EB;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #C6A664; /* muted gold */
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #C6A664;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
